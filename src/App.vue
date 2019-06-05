@@ -1,12 +1,36 @@
 <template>
   <div id="app">
+    <!-- <div id="app_a">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <div id="router"><router-link to="/">Home</router-link> </div>
+      <div id="router"><router-link to="/about">About</router-link> </div>
+      <div id="router"><router-link to="/info">Info</router-link></div>
     </div>
-    <router-view/>
+    </div> -->
+    <!-- <div class="content"> -->
+      <router-view/>
+    <!-- </div> -->
+    <abc></abc>
   </div>
 </template>
+
+<script>
+import center from './components/center/center';
+export default {
+  name:'app',
+
+    data(){
+      return{
+
+      };
+       
+    },
+    components:{
+        'abc':center
+    }
+    
+}
+</script>
 
 <style>
 #app {
@@ -15,17 +39,14 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-#nav {
-  padding: 30px;
+  padding: 0;
+  margin: 0;
+
+
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+/* .content{
+  height: 660px;
+  background: #42b983;
+} */
 </style>
